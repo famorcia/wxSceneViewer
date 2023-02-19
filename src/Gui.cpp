@@ -9,7 +9,7 @@
 
 ///////////////////////////////////////////////////////////////////////////
 
-wxSceneViewer::wxSceneViewer( wxWindow* parent, wxWindowID id, const wxString& title, const wxPoint& pos, const wxSize& size, long style ) : wxFrame( parent, id, title, pos, size, style )
+wxSceneViewerInterface::wxSceneViewerInterface( wxWindow* parent, wxWindowID id, const wxString& title, const wxPoint& pos, const wxSize& size, long style ) : wxFrame( parent, id, title, pos, size, style )
 {
 	this->SetSizeHints( wxDefaultSize, wxDefaultSize );
 
@@ -300,6 +300,6 @@ wxSceneViewer::wxSceneViewer( wxWindow* parent, wxWindowID id, const wxString& t
 	this->Centre( wxBOTH );
 }
 
-wxSceneViewer::~wxSceneViewer()
+wxSceneViewerInterface::~wxSceneViewerInterface()
 {
 }

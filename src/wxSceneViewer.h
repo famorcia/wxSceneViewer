@@ -30,23 +30,33 @@
  * OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 \**************************************************************************/
 
-#include "wxSceneViewer.h"
+#ifndef WXSCENEVIEWER_WXSCENEVIEWER_H
+#define WXSCENEVIEWER_WXSCENEVIEWER_H
 
-#include <wx/app.h>
+#include "Gui.h"
+#include "Inventor/Wx/viewers/SoWxExaminerViewer.h"
 
-// Define a new application type
-class wxSceneViewerApp : public wxApp
-{
+class wxSceneViewer : public wxSceneViewerInterface {
 public:
-    virtual bool OnInit() {
-        if ( !wxApp::OnInit() )
-            return false;
-        wxWindow * data = new wxSceneViewer(0);
-        data->Show();
-        return true;
-    }
+    explicit wxSceneViewer(wxWindow* parent,
+                           wxWindowID id = wxID_ANY,
+                           const wxString& title = wxT("wxSceneViewer"),
+                           const wxPoint& pos = wxDefaultPosition,
+                           const wxSize& size = wxSize( 800,600 ),
+                           long style = wxDEFAULT_FRAME_STYLE|wxTAB_TRAVERSAL );
+
+private:
+    void onOpen(wxCommandEvent& event);
+    void onExit(wxCommandEvent& event);
+    void onAbout(wxCommandEvent& event);
+
+
+    SoWxExaminerViewer* examinerViewer;
+
+wxDECLARE_NO_COPY_CLASS(wxSceneViewer);
+wxDECLARE_EVENT_TABLE();
+
 };
 
 
-wxIMPLEMENT_APP(wxSceneViewerApp);
-
+#endif //WXSCENEVIEWER_WXSCENEVIEWER_H
