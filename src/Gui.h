@@ -1,5 +1,5 @@
 ///////////////////////////////////////////////////////////////////////////
-// C++ code generated with wxFormBuilder (version 3.10.1-0-g8feb16b3)
+// C++ code generated with wxFormBuilder (version Oct 26 2018)
 // http://www.wxformbuilder.org/
 //
 // PLEASE DO *NOT* EDIT THIS FILE!
@@ -37,17 +37,18 @@ class wxSceneViewer : public wxFrame
 		wxMenu* menu_file;
 		wxMenu* menu_edit;
 		wxMenu* menu_viewing;
-		wxMenu* selection;
-		wxMenu* editors;
-		wxMenu* manips;
-		wxMenu* lights;
-		wxMenu* help;
+		wxMenu* menu_selection;
+		wxMenu* menu_editors;
+		wxMenu* menu_manips;
+		wxMenu* menu_lights;
+		wxMenu* menu_lights_sub_headlight;
+		wxMenu* menu_help;
 		wxStatusBar* status_bar;
 		wxPanel* panel;
 
 	public:
 
-		wxSceneViewer( wxWindow* parent, wxWindowID id = wxID_ANY, const wxString& title = wxT("wxSceneViewer"), const wxPoint& pos = wxDefaultPosition, const wxSize& size = wxSize( 500,300 ), long style = wxDEFAULT_FRAME_STYLE|wxTAB_TRAVERSAL );
+		wxSceneViewer( wxWindow* parent, wxWindowID id = wxID_ANY, const wxString& title = wxT("wxSceneViewer"), const wxPoint& pos = wxDefaultPosition, const wxSize& size = wxSize( 800,600 ), long style = wxDEFAULT_FRAME_STYLE|wxTAB_TRAVERSAL );
 
 		~wxSceneViewer();
 
