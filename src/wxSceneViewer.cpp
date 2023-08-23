@@ -104,7 +104,7 @@ void wxSceneViewer::onOpen(wxCommandEvent &event) {
                      wxOK | wxICON_ERROR);
     }
 
-    
+
         /*
     // proceed loading the file chosen by the user;
     // this can be done with e.g. wxWidgets input streams:
